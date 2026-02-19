@@ -191,7 +191,7 @@ $total_spent = $row_spent['total'] ?? 0;
 
     <footer class="footer">
         <div class="container">
-            <p style="margin-bottom: 10px; font-size: 14px;">© Copyright BTS LOVE YOURSELF World Tour 2026</p>
+            <p style="margin-bottom: 10px; font-size: 14px;">©Copyright BTS LOVE YOURSELF World Tour 2026</p>
             <p style="font-size: 12px; opacity: 0.7;">Presented by HYBE & Big Hit Entertainment | Sri Yanti | Official Ticketing System</p>
         </div>
     </footer>
