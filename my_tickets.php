@@ -96,7 +96,7 @@ $total_spent = $row_spent['total'] ?? 0;
         <section style="padding: 60px 0;">
             <div class="container">
                 <div class="section-header">
-                    <h2>Tiket Konser BTS Saya</h2>
+                    <h2> My Ticket Concert BTS</h2>
                     <p>Semua tiket yang telah Anda beli dalam satu tempat</p>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
@@ -191,7 +191,7 @@ $total_spent = $row_spent['total'] ?? 0;
 
     <footer class="footer">
         <div class="container">
-            <p style="margin-bottom: 10px; font-size: 14px;">©Copyright BTS LOVE YOURSELF World Tour 2026</p>
+            <p style="margin-bottom: 10px; font-size: 14px;">© Copyright BTS LOVE YOURSELF World Tour 2026</p>
             <p style="font-size: 12px; opacity: 0.7;">Presented by HYBE & Big Hit Entertainment | Sri Yanti | Official Ticketing System</p>
         </div>
     </footer>
@@ -199,7 +199,7 @@ $total_spent = $row_spent['total'] ?? 0;
     <div class="modal" id="ticketPreviewModal">
         <div class="modal-content" style="max-width: 900px;">
             <div class="modal-header">
-                <h3><i class="icon icon-ticket"></i> 💜 Preview Tiket BTS</h3>
+                <h3><i class="icon icon-ticket"></i> 💜 Preview Tiket Konser BTS</h3>
                 <button class="modal-close" onclick="closeModal('ticketPreviewModal')">×</button>
             </div>
             <div class="modal-body" id="ticketPreviewContent">
