@@ -96,7 +96,7 @@ $total_spent = $row_spent['total'] ?? 0;
         <section style="padding: 60px 0;">
             <div class="container">
                 <div class="section-header">
-                    <h2> My Ticket Concert BTS</h2>
+                    <h2> Tiket Konser BTS Saya</h2>
                     <p>Semua tiket yang telah Anda beli dalam satu tempat</p>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
