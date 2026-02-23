@@ -1,9 +1,7 @@
 <?php
-// File ini ada di folder process/
 include 'database.php';
 session_start();
 
-// Cek session dan authorization
 if(!isset($_SESSION['username']) || !isset($_SESSION['level'])) {
     header("Location: ../index.php");
     exit();
@@ -21,7 +19,6 @@ if($pengunjung_id == 0) {
     exit();
 }
 
-// Cek parameter ticket ID
 if(!isset($_GET['id']) || empty($_GET['id'])) {
     echo "<script>alert('Ticket ID is required.'); window.location.href = '../my_tickets.php';</script>";
     exit();
@@ -29,7 +26,6 @@ if(!isset($_GET['id']) || empty($_GET['id'])) {
 
 $ticket_id = intval($_GET['id']);
 
-// Query untuk mendapatkan detail tiket dengan verifikasi kepemilikan
 $query = "SELECT t.*, p.nama_lengkap, p.email, p.nomor_telp, p.alamat 
           FROM transaksi t 
           INNER JOIN pengunjung p ON t.id = p.id 
@@ -46,13 +42,11 @@ if(!$result || mysqli_num_rows($result) == 0) {
 
 $ticket = mysqli_fetch_assoc($result);
 
-// Generate data untuk tampilan
-$seat_section = chr(rand(65, 69)); // A-E
+$seat_section = chr(rand(65, 69)); 
 $seat_row = rand(1, 30);
 $seat_number = rand(1, 50);
 $gate_number = rand(1, 8);
 
-// Determine ticket color based on class
 $ticket_colors = [
     'ARMY Zone' => ['primary' => '#8a2be2', 'secondary' => '#ff69b4', 'bg' => '#f5e6ff'],
     'VIP Soundcheck' => ['primary' => '#ff1493', 'secondary' => '#ff69b4', 'bg' => '#ffe6f5'],
@@ -70,7 +64,6 @@ $color = $ticket_colors[$ticket['kelas']] ?? $ticket_colors['ARMY Zone'];
     <title>BTS Ticket - TRX<?php echo str_pad($ticket['id_transaksi'], 6, '0', STR_PAD_LEFT); ?></title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
-        /* Dynamic colors based on ticket type */
         .ticket-left {
             background: <?php echo $color['bg']; ?>;
         }
@@ -238,7 +231,6 @@ $color = $ticket_colors[$ticket['kelas']] ?? $ticket_colors['ARMY Zone'];
     </div>
     
     <script>
-    // Keyboard shortcuts
     document.addEventListener('keydown', function(e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
             e.preventDefault();
