@@ -158,7 +158,7 @@ if (isset($_GET['delete_ticket'])) {
             <div class="admin-header-top">
                 <h2>Dashboard Overview</h2>
                 <div class="user-info">
-                    <span>Selamat datang, <strong><?php echo $username; ?></strong></span>
+                    <span>Selamat datang admin <strong><?php echo $username; ?></strong></span>
                 </div>
             </div>
             <div class="stats-grid">
